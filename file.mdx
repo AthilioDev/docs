@@ -35,11 +35,9 @@ Configure sua licença:
 }
 ```
 
----
-
-> Importante
->
-> Utilize apenas licenças oficiais geradas no painel da Athilio Software.
+<Warning>
+  Utilize apenas licenças oficiais geradas no painel da Athilio Software.
+</Warning>
 
 ---
 
@@ -92,11 +90,9 @@ Verifique:
 [Athilio Spotify] ✔ Licença validada com sucesso!
 ```
 
-### Status
-
-Tudo funcionando corretamente.
-
-O sistema foi autenticado e inicializado com sucesso.
+<Check>
+  Tudo funcionando corretamente. O sistema foi autenticado e inicializado com sucesso.
+</Check>
 
 ---
 
@@ -106,26 +102,24 @@ O sistema foi autenticado e inicializado com sucesso.
 [Athilio Spotify] Verificando licença...
 ```
 
-### Status
-
-Processo normal de inicialização.
-
-O sistema está realizando comunicação com o servidor de autenticação.
+<Info>
+  Processo normal de inicialização. O sistema está realizando comunicação com o servidor de autenticação.
+</Info>
 
 ---
 
 # Resumo
 
-> Quando ocorrer erro relacionado à licença:
->
-> - Verifique o `license.json`
-> - Confirme a licença correta
-> - Verifique o IP autorizado
-> - Reinicie o servidor após alterações
+Quando ocorrer erro relacionado à licença:
+
+- Verifique o `license.json`
+- Confirme a licença correta
+- Verifique o IP autorizado
+- Reinicie o servidor após alterações
 
 ---
 
-# Exemplo Correto
+## Exemplo Correto
 
 ```json
 {
@@ -135,19 +129,21 @@ O sistema está realizando comunicação com o servidor de autenticação.
 
 ---
 
-# Recomendação
+## Recomendação
 
 Mantenha sempre:
 
 - O servidor atualizado
-- O nome da pasta original
-- A licença válida
-- O IP autorizado corretamente
+- O nome da pasta original (`athilio_spotify`)
+- A licença válida e configurada
+- O IP autorizado corretamente no painel
+
+<Tip>
+  Após qualquer alteração no `license.json` ou no painel, reinicie o recurso com `restart athilio_spotify` no console do servidor.
+</Tip>
 
 ---
 
 ## Suporte
 
 Caso o problema persista após todas as verificações, utilize os canais oficiais da Athilio Software.
-
-Porque 90% dos “bugs críticos” normalmente são um espaço errado no JSON ou alguém renomeando pasta achando que FiveM funciona na base da fé.
