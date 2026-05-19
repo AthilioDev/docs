@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "sequoia",
+  "theme": "linden",
   "name": "Athilio Software",
   "description": "Documentação AthilioFy",
 
@@ -23,7 +23,7 @@
   "navigation": {
     "groups": [
       {
-        "group": "🚀 Bem-Vindo",
+        "group": "Bem-vindo",
         "pages": [
           "introducao",
           "suporte",
@@ -31,15 +31,26 @@
         ]
       },
       {
-        "group": "🎧 Athilio_Spotify",
+        "group": "Geral",
         "pages": [
           "metodos-de-pagamentos",
-          "instalacao",
-          "file",
-          "configurar-licenca",
-          "a",
-          "s",
-          "termos"
+          "usar-meu-dominio",
+          "documentacao-discord",
+          "aplicativo",
+          "widgets",
+          "editor-local",
+          "inteligencia-artificial"
+        ]
+      },
+      {
+        "group": "Integrações",
+        "pages": [
+          "documentacao-produto-digital",
+          "documentacao-fivem",
+          "documentacao-redm",
+          "documentacao-minecraft",
+          "documentacao-hytale",
+          "documentacao-mta"
         ]
       }
     ]
