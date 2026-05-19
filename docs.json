@@ -58,8 +58,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Employee portal",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Dashboard",
+      "href": "https://dashboard.athiliodev.com"
     }
   },
   "footer": {

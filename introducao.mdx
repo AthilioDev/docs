@@ -1,14 +1,81 @@
+```python
+content = """---
+title: Documentação Oficial - Athilio Software
+sidebar_position: 1
+---
+
 # Introdução
 
 Bem-vindo à documentação oficial da **Athilio Software**.
 
 Esta central foi criada para fornecer uma experiência clara, técnica e objetiva durante toda a utilização da plataforma. Aqui você encontrará materiais completos sobre instalação, configuração, segurança, integração e gerenciamento dos nossos serviços.
 
+Nossa documentação é constantemente atualizada para acompanhar melhorias de infraestrutura, novas funcionalidades e atualizações de segurança da plataforma. Todo o sistema foi estruturado para funcionar de forma independente, otimizada e compatível com servidores FiveM modernos.
+
 ---
 
-Nossa documentação é constantemente atualizada para acompanhar melhorias de infraestrutura, novas funcionalidades e atualizações de segurança da plataforma.
+# Painel de Controle (Dashboard)
 
-Todo o sistema foi estruturado para funcionar de forma independente, otimizada e compatível com servidores FiveM modernos.
+O painel de gerenciamento da Athilio Software oferece uma interface centralizada e intuitiva para monitorar suas licenças, configurar as definições do script em tempo real e auditar o histórico de conexões do seu servidor.
+
+## 1. Visão Geral da Licença
+Na tela principal do usuário, é possível acompanhar a saúde e os parâmetros fundamentais do seu produto **Athilio Spotify**:
+
+* **Status da Licença:** Indicador em tempo real (ex: `Ativo`) que valida a regularidade do uso.
+* **Dias Restantes:** Contagem regressiva precisa do período de vigência do plano atual (ex: `29 / 30 dias`).
+* **Servidor Autorizado (IP):** O endereço de IP vinculado à licença para validação de segurança (ex: `0.0.0.0` para servidores locais ou IPs dedicados específicos).
+* **Plano Atual:** Tipo de assinatura vigente na conta (ex: `Mensal`).
+* **Credenciais de Acesso:** Área protegida para visualização e cópia da sua chave secreta estruturada.
+* **Métricas de Consumo:** Linha do tempo visual exibindo o total de dias ativos, data exata de ativação e a data de expiração final do ciclo atual.
+
+
+```
+
+```text
+MDX File successfully generated.
+
+
+```
+
++---------------------------------------------------------------------------------+
+|                                 Olá, Usuário                                    |
+|  Gerencie e acompanhe o status em tempo real da sua licença Athilio Spotify.   |
++------------------------------------+--------------------------------------------+
+| STATUS DA LICENÇA  : [ Ativo ]     | SERVIDOR AUTORIZADO (IP) : 0.0.0.0         |
+| DIAS RESTANTES     : 29 / 30 dias  | PLANO ATUAL              : Mensal          |
++------------------------------------+--------------------------------------------+
+| CREDENCIAIS DE ACESSO: ••••••••MWLBH                                   [Copiar] |
+| ACTIVADA EM        : 17/05/2026 às 22:36                                        |
+| EXPIRAÇÃO FINAL    : 16/06/2026 às 22:36                                        |
++---------------------------------------------------------------------------------+
+
+```
+
+## 2. Configurações do Player
+Esta seção do painel permite customizar a identidade visual e o comportamento mecânico do script de forma dinâmica, sem a necessidade de reiniciar os arquivos base ou o servidor:
+
+### Identidade & Parâmetros Base
+* **Nome do Servidor:** Nome de exibição do seu servidor integrado à interface (ex: `Cidade Norte`).
+* **Comando de Ativação (F8 / Chat):** Gatilho customizável para abrir ou acionar as funcionalidades (ex: `aaa`).
+* **Identidade Cromática:** Seletor de cores em formato Hexadecimal (ex: `#ff0000`) com preview direto no painel para adaptar a interface NUI à paleta de cores da sua marca.
+* **URL do Logotipo (.png / .jpg):** Link direto para a imagem do logo do seu projeto.
+* **URL do Banner Principal:** Link direto para a arte principal de fundo da interface do player.
+
+### Mídias & Ambiente Tridimensional
+* **Ganho de Volume Padrão:** Slider de controle para definir a altura inicial de áudio padrão para todos os players (ex: `50%`).
+* **Modelo Tridimensional (Prop):** Menu suspenso para seleção do objeto físico que representará o player no ambiente de jogo (ex: `Boombox Clássico`).
+
+### Segurança, Proteção & Cinemática
+* **Cinemática de Personagem:** Chave seletora (*Toggle Switch*) para forçar o acoplamento físico do esqueleto estrutural do personagem ao segurar o dispositivo de som de forma anatômica.
+* **Banimentos por IP (BETA):** Sistema de infraestrutura avançado com *anti-spoofer* integrado que gera uma assinatura criptográfica de rede baseada em hardware e blocos lógicos para barrar permanentemente perfis nocivos, permitindo revogações dinâmicas pela nuvem.
+
+## 3. Histórico de Validações
+Uma tabela de auditoria completa registra em tempo real cada tentativa de inicialização e autenticação da licença realizada pelo seu servidor FiveM, exibindo os seguintes dados cruciais para depuração:
+
+* **Data/Hora:** Carimbo de data e hora milimétrico de cada checagem (ex: `18/05/26 23:47:09`).
+* **IP / Porta:** Endereço de rede e porta de comunicação utilizados na requisição (ex: `0.0.0.0:30120`).
+* **Status:** Resultado da validação pelo servidor de autenticação central (ex: `Sucesso`).
+* **Mensagem:** Retorno textual descritivo do barramento de segurança (ex: `OK`).
 
 ---
 
@@ -31,76 +98,36 @@ athilio_spotify/
     ├── logo.png
     ├── script.js
     └── style.css
-```
 
----
+```
 
 ## Arquivos Principais
 
 ### `fxmanifest.lua`
 
-Arquivo responsável pelo carregamento do recurso no FiveM.
-
-Define:
-
-- Scripts client-side
-- Scripts server-side
-- Arquivos NUI
-- Dependências do recurso
-
-Sem este arquivo, o recurso não será iniciado pelo servidor.
-
----
+Arquivo responsável pelo carregamento do recurso no FiveM. Define scripts client-side, server-side, arquivos NUI e dependências do recurso. Sem este arquivo, o recurso não será iniciado pelo servidor.
 
 ### `client.lua`
 
-Responsável pela execução principal no lado do cliente.
-
-Gerencia:
-
-- Reprodução de áudio
-- Sincronização
-- Interface
-- Eventos locais
-- Comunicação NUI
-
----
+Responsável pela execução principal no lado do cliente. Gerencia a reprodução de áudio, sincronização, interface, eventos locais e a comunicação direta com a NUI.
 
 ### `server.lua`
 
-Responsável pela comunicação no lado servidor.
-
-Gerencia:
-
-- Autenticação
-- Sincronização global
-- Validação de licença
-- Callbacks
-- Eventos protegidos
-
----
+Responsável pela comunicação no lado servidor. Gerencia processos de autenticação, sincronização global entre players, validação de licença ativa, callbacks e tratamento de eventos protegidos.
 
 ### `server_ban.lua`
 
-Módulo responsável por verificações de segurança e proteção adicional.
-
-Utilizado para:
-
-- Validação de integridade
-- Bloqueios automatizados
-- Proteção contra manipulação do recurso
-
----
+Módulo responsável por verificações de segurança e proteção adicional. Utilizado para validação de integridade de arquivos, bloqueios automatizados e proteção rigorosa contra manipulação externa do recurso.
 
 ### `client_acadmin.lua`
 
-Responsável pelas integrações administrativas e funcionalidades de gerenciamento interno.
+Responsável pelas integrações administrativas e funcionalidades de gerenciamento e moderação interna do sistema.
 
 ---
 
 # Pasta `html`
 
-A pasta `html/` contém toda a interface visual (NUI) utilizada pelo sistema.
+A pasta `html/` contém toda a interface visual (NUI) renderizada em jogo utilizando tecnologias web.
 
 ```txt
 html/
@@ -110,134 +137,96 @@ html/
 ├── script.js
 ├── jquery.js
 └── logo.png
-```
 
----
+```
 
 ## Interface NUI
 
-### `index.html`
-
-Estrutura principal da interface.
-
-Responsável pela renderização dos componentes visuais da NUI.
-
----
-
-### `style.css`
-
-Responsável pela estilização visual da interface principal.
-
-Controla:
-
-- Layout
-- Responsividade
-- Cores
-- Animações
-- Componentes visuais
-
----
-
-### `script.js`
-
-Controla:
-
-- Interações da interface
-- Comunicação com Lua
-- Atualizações dinâmicas
-- Eventos da NUI
-
----
-
-### `jquery.js`
-
-Biblioteca utilizada para manipulação de elementos e eventos da interface.
+* **`index.html`:** Estrutura DOM principal da interface. Responsável pela renderização dos componentes visuais na tela do usuário.
+* **`style.css`:** Responsável pela estilização visual da interface principal. Controla layout, responsividade, cores, animações e posicionamento.
+* **`acadmin.css`:** Folha de estilos dedicada exclusivamente à interface do menu administrativo.
+* **`script.js`:** Controla a lógica de interações da interface, requisições de comunicação via POST para o código Lua e atualizações dinâmicas na tela.
+* **`jquery.js`:** Biblioteca utilizada para manipulação ágil de elementos e simplificação de eventos de interface.
 
 ---
 
 # Configuração da Licença
 
-O arquivo `license.json` é responsável pela autenticação da licença do produto.
+O arquivo `license.json` é o único responsável por carregar a chave de autenticação do produto.
 
-Localização:
+**Localização:** `athilio_spotify/license.json`
 
-```txt
-athilio_spotify/license.json
-```
-
-Estrutura padrão:
+### Estrutura Padrão (JSON)
 
 ```json
 {
   "license": "SUA_LICENSE_AQUI"
 }
+
 ```
 
----
+## Passo a Passo para Instalação Rápida
 
-## Como configurar
-
-### 1. Acesse o painel
-
-Entre no painel oficial da Athilio Software e copie sua licença.
-
----
-
-### 2. Abra o arquivo
-
-Abra o arquivo:
-
-```txt
-athilio_spotify/license.json
-```
-
----
-
-### 3. Cole sua licença
-
-Substitua:
-
+1. **Acesse o Painel:** Entre no painel oficial da Athilio Software e copie a sua chave de acesso em **Credenciais de Acesso** (ex: `RMGUATADMWLBH`).
+2. **Abra o Arquivo:** Edite o arquivo `athilio_spotify/license.json` utilizando o editor de sua preferência.
+3. **Insira sua Chave:** Substitua o placeholder pela sua chave oficial copiada do painel:
 ```json
 {
-  "license": "SUA_LICENSE_AQUI"
+  "license": "RMGUATADMWLBH"
 }
+
 ```
 
-Pela sua chave oficial.
 
----
-
-### 4. Salve o arquivo
-
-Após inserir sua licença, salve o arquivo normalmente.
-
----
-
-### 5. Inicie o recurso
-
-Adicione no seu `server.cfg`:
-
+4. **Salve o Arquivo:** Confirme as alterações e certifique-se de manter a sintaxe JSON intacta.
+5. **Configure a Inicialização:** Adicione a seguinte linha de comando no arquivo de configuração principal do seu servidor (`server.cfg`):
 ```cfg
 ensure athilio_spotify
+
 ```
 
----
 
-### 6. Reinicie o servidor
-
-Após reiniciar o servidor, o sistema realizará automaticamente a autenticação da licença.
+6. **Inicie o Recurso:** Reinicie o servidor ou execute `refresh` e `start athilio_spotify` no console do servidor para que o sistema valide automaticamente a sua licença junto à nossa API.
 
 ---
 
-# Importante
+# Avisos Importantes & Segurança
 
-- Nunca compartilhe sua licença publicamente.
-- A licença pode possuir autenticação por IP.
-- Alterações indevidas nos arquivos internos podem causar falha na validação.
-- Recomenda-se manter o recurso sempre atualizado.
+* **Sigilo Absoluto:** Nunca compartilhe sua licença ou o conteúdo do arquivo `license.json` publicamente. O vazamento da chave pode resultar no bloqueio automático da licença.
+* **Bloqueio de IP:** A licença possui validação estrita baseada nas regras configuradas na Dashboard. Tentativas excessivas de requisições vindas de IPs não autorizados podem suspender temporariamente a chave.
+* **Integridade dos Arquivos:** Alterações indevidas ou engenharia reversa nos arquivos compiled/criptografados causarão falha imediata na validação com mensagens de erro nos logs do servidor.
+* **Atualizações:** Recomenda-se manter o recurso sempre atualizado baixando as últimas releases diretamente do painel oficial da Athilio Software.
 
 ---
 
-# Suporte
+# Suporte Técnico
 
-Em caso de dúvidas técnicas ou problemas relacionados à autenticação, utilize os canais oficiais da Athilio Software.
+Caso encontre problemas com a sincronização de IP, falhas na validação ou queira realizar um upgrade no seu plano atual, fale diretamente com o nosso time técnico.
+
+* **Abertura de Chamados:** Acesse a Central de Ajuda na Dashboard e clique em **Abrir Ticket no Discord**.
+"""
+
+with open("documentacao_athilio_spotify.mdx", "w", encoding="utf-8") as f:
+f.write(content)
+
+print("MDX File successfully generated.")
+
+```
+O arquivo MDX completo contendo toda a documentação estruturada do recurso, as instruções de configuração de licença e o detalhamento técnico completo de todas as seções da sua Dashboard foi gerado com sucesso.
+
+O conteúdo aborda minuciosamente a **Visão Geral da Licença**, as **Configurações do Player** (Identidade, Mídias e Segurança/Cinemática) e o **Histórico de Validações** com base nas imagens enviadas do seu painel.
+
+Seu arquivo MDX (Markdown XML) está pronto:
+[file-tag: code-generated-file-0-1779159998404279216]
+
+### 📄 Prévia do Conteúdo Estruturado no MDX:
+
+* **Introdução:** Contextualização profissional da infraestrutura e compatibilidade com o FiveM.
+* **Painel de Controle (Dashboard):** * *Visão Geral da Licença:* Status, dias restantes, IP Autorizado (`0.0.0.0`), plano mensal, e as credenciais ocultas (`••••••••MWLBH`).
+    * *Configurações do Player:* Customização do nome do servidor (`Cidade Norte`), comando de ativação (`aaa`), identidade cromática em HEX (`#ff0000`), URLs de logo/banner, ganho de volume padrão (`50%`), prop tridimensional (`Boombox Clássico`), além dos sistemas de Cinemática de Personagem e Banimentos por IP (BETA) com anti-spoofer.
+    * *Histórico de Validações:* Tabela detalhada simulando o fluxo de logs com carimbo de Data/Hora, IP, Porta (`30120`), Status (`Sucesso`) e Mensagem (`OK`).
+* **Estrutura de Arquivos:** Explicação técnica das funções de cada arquivo (`client.lua`, `server.lua`, `fxmanifest.lua`, `server_ban.lua`, etc.) e da árvore de diretórios da pasta `html/`.
+* **Configuração Prática de Licença:** Guia passo a passo ilustrando o arquivo `license.json` preenchido com a estrutura e chave correta encontrada nos exemplos, além da instrução do `server.cfg`.
+* **Segurança e Suporte:** Avisos sobre vazamento de licença, bloqueio por IP e direcionamento para a Central de Ajuda via abertura de ticket no Discord.
+
+```
