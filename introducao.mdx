@@ -1,174 +1,39 @@
 ---
-title: Documentação Oficial - Athilio Software
-sidebar_position: 1
+title: "Documentação Oficial - Athilio Software"
+description: "Bem-vindo ao guia oficial do Athilio_Spotify"
 ---
 
-# Introdução
+# Bem-vindo
 
-Bem-vindo à documentação oficial da **Athilio Software**.
+Somos a **Core**, uma empresa especializada no desenvolvimento de **scripts**, **interfaces** e **consultoria** para servidores de **FiveM**.
 
-Esta central foi criada para fornecer uma experiência clara, técnica e objetiva durante toda a utilização da plataforma. Aqui você encontrará materiais completos sobre instalação, configuração, segurança, integração e gerenciamento dos nossos serviços.
-
-Nossa documentação é constantemente atualizada para acompanhar melhorias de infraestrutura, novas funcionalidades e atualizações de segurança da plataforma. Todo o sistema foi estruturado para funcionar de forma independente, otimizada e compatível com servidores FiveM modernos.
-
-<Check>
-  Se você tiver qualquer dúvida, entre em contato com a nossa equipe de suporte em nosso [WhatsApp](https://wa.me/) e [Discord](https://discord.gg/).
-</Check>
+Trabalhamos lado a lado com nossos clientes, sempre priorizando a **qualidade**, a **estabilidade** e um **suporte técnico de verdade**.
 
 ---
 
-# Painel de Controle (Dashboard)
+## F.A.Q
 
-O painel de gerenciamento da Athilio Software oferece uma interface centralizada e intuitiva para monitorar suas licenças, configurar definições do script em tempo real e auditar o histórico de conexões do servidor.
+<details>
+  <summary><strong>Qual plataforma que vocês trabalham?</strong></summary>
+  Somos compatíveis com as principais bases brasileiras, incluindo **Creative**, **Creative Network**, **vRP**, **vRPEX** e derivados. O Athilio_Spotify é entregue em formato standalone.
+</details>
 
-<img
-  src="https://i.postimg.cc/DzDSNftr/image.png"
-  alt="Dashboard Athilio Software"
-  style={{ borderRadius: '16px', marginTop: '20px', marginBottom: '30px' }}
-/>
+<details>
+  <summary><strong>Quais os serviços que vocês oferecem?</strong></summary>
+  Oferecemos desenvolvimento de scripts, interfaces, consultoria, instalação e suporte técnico especializado para servidores FiveM.
+</details>
 
-## 1. Visão Geral da Licença
-
-Na tela principal do usuário, é possível acompanhar os parâmetros fundamentais do produto **Athilio Spotify**:
-
-- **Status da Licença:** Indicador em tempo real da situação atual da licença.
-- **Dias Restantes:** Contagem precisa do período restante do plano ativo.
-- **Servidor Autorizado (IP):** IP vinculado para validação de segurança.
-- **Plano Atual:** Modalidade da assinatura ativa.
-- **Credenciais de Acesso:** Área protegida para visualização da chave privada.
-- **Métricas de Consumo:** Informações detalhadas de ativação e expiração.
+<details>
+  <summary><strong>Quais as linguagens de programação que utilizam?</strong></summary>
+  Trabalhamos com **Lua**, **HTML/CSS**, **JavaScript** e recursos próprios do **FiveM** para garantir desempenho e compatibilidade.
+</details>
 
 ---
 
-## 2. Configurações do Player
-
-Esta seção permite personalizar a identidade visual e o comportamento do sistema em tempo real.
-
-### Identidade & Configurações Base
-
-- Nome do servidor
-- Comando de ativação
-- Cor principal da interface
-- URL do logotipo
-- URL do banner principal
-
-### Áudio & Ambiente
-
-- Volume padrão inicial
-- Modelo tridimensional do player
-- Configurações de sincronização
-
-### Segurança & Proteção
-
-- Cinemática de personagem
-- Proteção anti-spoofer
-- Sistema de banimento por IP
-- Verificações de integridade
-
----
-
-## 3. Histórico de Validações
-
-A Dashboard também fornece uma tabela completa de auditoria contendo:
-
-- Data e horário da validação
-- IP e porta utilizados
-- Status da autenticação
-- Retorno detalhado da API
-
----
-
-# Estrutura de Arquivos
-
-```txt
-athilio_spotify/
-├── client.lua
-├── client_acadmin.lua
-├── fxmanifest.lua
-├── license.json
-├── server.lua
-├── server_ban.lua
-└── html/
-    ├── acadmin.css
-    ├── index.html
-    ├── jquery.js
-    ├── logo.png
-    ├── script.js
-    └── style.css
-```
-
-## Arquivos Principais
-
-### `fxmanifest.lua`
-
-Responsável pelo carregamento do recurso no FiveM.
-
-### `client.lua`
-
-Gerencia reprodução de áudio, interface e sincronização client-side.
-
-### `server.lua`
-
-Gerencia autenticação, sincronização global e callbacks protegidos.
-
-### `server_ban.lua`
-
-Responsável pelas proteções adicionais e verificações de integridade.
-
-### `client_acadmin.lua`
-
-Responsável pelas funcionalidades administrativas do sistema.
-
----
-
-# Configuração da Licença
-
-O arquivo `license.json` é responsável pela autenticação do produto.
-
-## Estrutura JSON
-
-```json
-{
-  "license": "SUA_LICENSE_AQUI"
-}
-```
-
-<Warning>
-  Nunca compartilhe sua licença publicamente. O compartilhamento da chave pode resultar em **banimento permanente** da plataforma sem possibilidade de reembolso.
-</Warning>
-
----
-
-# Configuração no server.cfg
-
-Adicione a linha abaixo no seu arquivo `server.cfg` para garantir que o recurso seja iniciado corretamente:
-
-```cfg
-ensure athilio_spotify
-```
-
----
-
-# Avisos Importantes
-
-<Warning>
-  Nunca compartilhe sua licença publicamente.
-</Warning>
-
-<Warning>
-  Não altere arquivos internos do recurso.
-</Warning>
-
-<Tip>
-  Utilize artefacts atualizados do FiveM e mantenha o `oxmysql` sempre atualizado.
-</Tip>
-
----
-
-# Suporte Técnico
-
-Caso encontre problemas técnicos, utilize os canais oficiais da Athilio Software para abertura de chamados e suporte especializado.
-
-<Check>
-  Se você tiver qualquer dúvida, entre em contato com a nossa equipe de suporte em nosso [WhatsApp](https://wa.me/) e [Discord](https://discord.gg/).
-</Check>
+<CardGroup cols={1}>
+  <Card title="Próximo" icon="arrow-right">
+    <strong>Termos</strong>
+    <p>Confira os termos de uso, licenciamento e regras da Core.</p>
+    <a href="/athilio_spotify">Ir para Athilio_Spotify</a>
+  </Card>
+</CardGroup>

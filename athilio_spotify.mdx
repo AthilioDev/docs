@@ -1,0 +1,156 @@
+---
+title: "Athilio_Spotify"
+description: "Guia único com suporte, instalação, licenças e termos da Core."
+---
+
+# Athilio_Spotify
+
+Bem-vindo ao hub completo da **Core**. Esta página concentra todas as informações principais sobre suporte, compatibilidade, termos, instalação e licenciamento do Athilio_Spotify.
+
+---
+
+## 🚑 Suporte
+
+O suporte oficial da Core é oferecido exclusivamente pelo Discord e pelo sistema de tickets.
+
+- Atendimento oficial via Discord.
+- Exclusivo para o titular da licença ou pessoa autorizada.
+- Respeito é obrigatório com toda a equipe.
+- Não mencione membros da equipe sem autorização.
+- Chamados podem ser pausados em caso de desrespeito.
+- Envie arquivos e informações solicitadas para agilizar o atendimento.
+
+<Check>
+  Suporte gratuito para correções de bugs por até 90 dias após a compra.
+</Check>
+
+<Tip>
+  Instalações adicionais após 7 dias podem ser cobradas entre R$ 50,00 e R$ 100,00.
+</Tip>
+
+---
+
+## ⚙️ Framework
+
+Todos os nossos resources são compatíveis com os principais frameworks utilizados no Brasil, como **Creative**, **Creative Network**, **vRP**, **vRPEX** e derivados.
+
+- Não oferecemos suporte oficial para **QBCore** ou **ESX**.
+- Os scripts são **standalone** e podem ser adaptados para qualquer base.
+- A parte ofuscada `main` utiliza apenas **nativas do Lua** e **FiveM**.
+- Funções específicas de framework ficam em uma pasta `framework` separada.
+
+<Warning>
+  A compatibilidade depende da sua base. Caso precise de adaptação, consulte nosso suporte ou solicite consultoria.
+</Warning>
+
+---
+
+## 📜 Termos
+
+Ao adquirir, acessar ou utilizar nossos produtos, você aceita todos os termos descritos nesta página.
+
+- Emissão de comprovantes falsos leva a banimento.
+- Revenda de produtos da Core é estritamente proibida.
+- Licenças mensais têm validade de 30 dias.
+- Produtos são entregues em formato ofuscado; somente configurações podem ser alteradas.
+- Licenças adicionais têm 40% de desconto em compras vinculadas à licença vitalícia.
+- Cada licença pode ser transferida apenas uma vez para outro usuário Discord.
+- Transferências podem ser recusadas em caso de suspeita de revenda.
+
+---
+
+## 🛠️ Instalação
+
+1. Extraia o recurso `athilio_spotify` para a pasta `resources/`.
+2. Abra o arquivo `athilio_spotify/license.json`.
+3. Insira sua licença:
+
+```json
+{
+  "license": "SUA_LICENSE_AQUI"
+}
+```
+
+4. Adicione ao `server.cfg`:
+
+```cfg
+ensure athilio_spotify
+```
+
+5. Reinicie o servidor.
+
+<Note>
+  Use artefacts atualizados e mantenha o `oxmysql` sempre na versão correta.
+</Note>
+
+---
+
+## 🧩 Erros e Soluções
+
+### Problema: licença inválida
+
+Verifique:
+
+- se a licença está correta no `license.json`
+- se o IP do servidor foi autorizado
+- se o nome da pasta está correto
+- se o servidor tem acesso à internet
+
+### Problema: recurso não inicia
+
+Verifique:
+
+- `ensure athilio_spotify` no `server.cfg`
+- ordem de carregamento das dependências
+- cache do FiveM
+- logs do console do servidor
+
+### Problema: interface não abre
+
+Verifique:
+
+- pasta `html/` presente
+- arquivos `index.html`, `style.css`, `script.js`
+- erros no console `F8`
+
+---
+
+## 🔐 Licença
+
+A licença do Athilio_Spotify valida o recurso durante a inicialização do servidor.
+
+- Configure o arquivo `athilio_spotify/license.json`.
+- Não compartilhe sua licença publicamente.
+- Licenças adicionais são vinculadas à licença principal.
+- Perda de licença por descumprimento não é reembolsável.
+
+---
+
+## 📊 Dashboard
+
+O painel da Core permite:
+
+- acompanhar o status da licença
+- ver dias restantes
+- visualizar o IP autorizado
+- acessar a chave de autenticação
+- monitorar histórico de validações
+- redefinir o IP do servidor
+
+<Tip>
+  O dashboard é o local oficial para gerenciamento de licenças e atualizações.
+</Tip>
+
+---
+
+## 🔒 Bloqueio por IP
+
+O sistema de proteção valida o IP do VPS e impede ativações não autorizadas.
+
+- IP autorizado deve estar correto no painel.
+- Migração de VPS ou mudança de IP exige redefinição.
+- Uso em múltiplos servidores sem autorização é proibido.
+
+<Warning>
+  Licenças são bloqueadas em caso de suspeita de vazamento, revenda ou pirataria.
+</Warning>
