@@ -23,7 +23,7 @@
   "navigation": {
     "groups": [
       {
-        "group": "Bem-Vindo",
+        "group": "🚀 Bem-Vindo",
         "pages": [
           "introducao",
           "suporte",
@@ -31,9 +31,10 @@
         ]
       },
       {
-        "group": "Athilio_Spotify",
+        "group": "🎧 Athilio_Spotify",
         "pages": [
           "instalacao",
+          "pagamentos",
           "file",
           "configurar-licenca",
           "a",
