@@ -1,0 +1,155 @@
+---
+title: "Instalação"
+description: "Guia oficial de instalação do AthilioFy."
+---
+
+# Instalação
+
+O **AthilioFy** foi desenvolvido para oferecer instalação rápida, compatível e estável em qualquer estrutura moderna de servidor FiveM.
+
+---
+
+## Compatibilidade
+
+> Compatível com:
+>
+> - vRP
+> - QBCore
+> - ESX
+> - Creative
+> - Bases customizadas
+> - Estruturas standalone
+
+---
+
+## Estrutura do Recurso
+
+```txt
+athilio_spotify/
+├── client.lua
+├── client_acadmin.lua
+├── fxmanifest.lua
+├── license.json
+├── server.lua
+├── server_ban.lua
+└── html/
+```
+
+---
+
+# Processo de Instalação
+
+## 1. Extraia o recurso
+
+Envie a pasta:
+
+```txt
+athilio_spotify
+```
+
+Para:
+
+```txt
+resources/[scripts]
+```
+
+---
+
+## 2. Configure a licença
+
+Abra o arquivo:
+
+```txt
+athilio_spotify/license.json
+```
+
+Configure sua licença:
+
+```json
+{
+  "license": "SUA_LICENSE_AQUI"
+}
+```
+
+---
+
+> Importante
+>
+> Nunca compartilhe sua licença publicamente.
+
+---
+
+## 3. Adicione no server.cfg
+
+```cfg
+ensure athilio_spotify
+```
+
+---
+
+## 4. Reinicie o servidor
+
+Após iniciar o recurso, o sistema realizará automaticamente:
+
+- Verificação da licença
+- Inicialização da interface
+- Carregamento da NUI
+- Sincronização interna
+
+---
+
+# Estrutura NUI
+
+```txt
+html/
+├── index.html
+├── style.css
+├── script.js
+├── jquery.js
+└── logo.png
+```
+
+---
+
+## Problemas Comuns
+
+### Licença inválida
+
+Verifique:
+
+- Licença configurada corretamente
+- IP autorizado
+- Nome correto da pasta
+- VPS conectado à internet
+
+---
+
+### Recurso não inicia
+
+Confirme se existe:
+
+```cfg
+ensure athilio_spotify
+```
+
+No `server.cfg`.
+
+---
+
+## Recomendação
+
+> Utilize artefacts atualizados do FiveM para garantir melhor estabilidade e compatibilidade.
+
+---
+
+## Suporte
+
+Caso tenha dúvidas técnicas ou problemas durante a instalação, utilize os canais oficiais da Athilio Software.
+
+- Discord Oficial
+- Atendimento técnico
+- Suporte operacional
+
+---
+
+O AthilioFy foi desenvolvido para funcionar de forma simples, otimizada e compatível com qualquer estrutura moderna. Porque instalação de script não deveria parecer montagem de motor de submarino soviético.

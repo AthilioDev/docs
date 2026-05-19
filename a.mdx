@@ -1,0 +1,191 @@
+---
+title: "Dashboard"
+description: "Gerenciamento da licença AthilioFy através do painel oficial."
+---
+
+# Dashboard
+
+O painel da **Athilio Software** permite gerenciar sua licença do AthilioFy em tempo real de forma simples, segura e centralizada.
+
+Através do dashboard você poderá acompanhar:
+
+- Status da licença
+- Tempo restante
+- Chave de autenticação
+- Histórico de validações
+- Informações do servidor
+- Redefinição de IP
+- Status da ativação
+
+---
+
+# Informações da Licença
+
+Após acessar o painel, você visualizará informações semelhantes a:
+
+```txt
+Status da Licença: Ativo
+Dias Restantes: 29 / 30 dias
+Plano Atual: mensal
+Servidor Autorizado: 0.0.0.0
+```
+
+---
+
+## Credenciais
+
+A chave exibida no painel é utilizada para autenticação do recurso.
+
+Exemplo:
+
+```txt
+RMGUATADMWLBH
+```
+
+Essa chave deverá ser inserida no arquivo:
+
+```txt
+athilio_spotify/license.json
+```
+
+---
+
+## Configuração da Licença
+
+Estrutura correta:
+
+```json
+{
+  "license": "RMGUATADMWLBH"
+}
+```
+
+---
+
+> Importante
+>
+> Nunca compartilhe sua licença publicamente.
+
+---
+
+# Guia de Instalação Rápida
+
+## 1. Faça o download do recurso
+
+Baixe o resource oficial do AthilioFy através do painel.
+
+---
+
+## 2. Configure o arquivo de licença
+
+Crie ou edite o arquivo:
+
+```txt
+athilio_spotify/license.json
+```
+
+---
+
+## 3. Insira sua chave
+
+```json
+{
+  "license": "SUA_LICENSE_AQUI"
+}
+```
+
+---
+
+## 4. Inicie o recurso
+
+Adicione no `server.cfg`:
+
+```cfg
+ensure athilio_spotify
+```
+
+---
+
+# Histórico de Validações
+
+O painel também disponibiliza um histórico completo das últimas autenticações realizadas pela sua licença.
+
+Exemplo:
+
+```txt
+18/05/26 21:57:04 | 0.0.0.0 | 30120 | Sucesso | OK
+18/05/26 20:58:16 | 0.0.0.0 | 30120 | Sucesso | OK
+17/05/26 23:03:20 | 0.0.0.0 | 30120 | Falhou  | Licença não encontrada
+```
+
+---
+
+## Informações Registradas
+
+Cada validação registra:
+
+- Data e horário
+- IP do servidor
+- Porta utilizada
+- Status da autenticação
+- Mensagem retornada
+
+---
+
+# Redefinição de IP
+
+Caso o servidor seja migrado, reinstalado ou tenha alteração de IP, será necessário realizar uma redefinição no painel.
+
+A redefinição permite atualizar o novo endereço autorizado da licença sem necessidade de gerar uma nova chave.
+
+---
+
+> Recomendação
+>
+> Sempre confirme o IP correto do VPS antes de realizar alterações no painel.
+
+---
+
+# Status da Licença
+
+## Licença Ativa
+
+```txt
+[Athilio Spotify] ✔ Licença validada com sucesso!
+```
+
+Indica que:
+
+- A licença foi autenticada
+- O servidor está autorizado
+- O recurso foi iniciado corretamente
+
+---
+
+## Processo de Validação
+
+```txt
+[Athilio Spotify] Verificando licença...
+```
+
+Mensagem exibida durante a comunicação inicial com o sistema de autenticação.
+
+---
+
+# Segurança
+
+O sistema de autenticação foi desenvolvido para garantir:
+
+- Integridade da licença
+- Controle de ativações
+- Segurança operacional
+- Monitoramento de validações
+- Controle de autenticações
+
+---
+
+# Suporte
+
+Caso encontre dificuldades durante o gerenciamento da licença, utilize os canais oficiais da Athilio Software.
+
+Porque inevitavelmente alguém sempre consegue colar a licença errada, editar JSON no bloco de notas e depois culpar o universo inteiro pela autenticação falhar.

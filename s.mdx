@@ -1,0 +1,133 @@
+---
+title: "Bloqueio por IP"
+description: "Sistema de proteção e autenticação por IP do AthilioFy."
+---
+
+# Bloqueio por IP
+
+O AthilioFy utiliza um sistema de autenticação com validação por IP para aumentar a segurança da licença e impedir ativações não autorizadas.
+
+Esse processo ocorre automaticamente durante a inicialização do recurso.
+
+---
+
+# Como Funciona
+
+Ao iniciar o servidor, o sistema realiza:
+
+- Verificação da licença
+- Identificação do IP do VPS
+- Validação da autenticação
+- Registro da tentativa de conexão
+
+Caso o IP esteja autorizado, a licença será ativada normalmente.
+
+---
+
+## Exemplo de Autenticação
+
+```txt
+[Athilio Spotify] ✔ Licença validada com sucesso!
+```
+
+---
+
+# IP Não Autorizado
+
+Quando o IP do servidor não corresponde ao autorizado no painel, o sistema poderá retornar:
+
+```txt
+[Athilio Spotify] ✖ IP não autorizado
+```
+
+---
+
+## Possíveis Motivos
+
+- Migração de VPS
+- Alteração de IP da hospedagem
+- Proxy ou firewall interferindo
+- Configuração incorreta do servidor
+- Utilização da licença em outro ambiente
+
+---
+
+# Redefinição de IP
+
+Caso o IP do servidor seja alterado, será necessário realizar uma redefinição diretamente no dashboard da Athilio Software.
+
+A redefinição atualiza o novo IP autorizado para utilização da licença.
+
+---
+
+## Quando redefinir
+
+Realize redefinição nos seguintes casos:
+
+- Troca de hospedagem
+- Mudança de VPS
+- Reinstalação do servidor
+- Alteração de IP público
+- Mudança de infraestrutura
+
+---
+
+# Histórico de Validações
+
+Todas as tentativas de autenticação ficam registradas no painel.
+
+Exemplo:
+
+```txt
+18/05/26 21:57:04 | 0.0.0.0 | 30120 | Sucesso | OK
+17/05/26 23:03:20 | 0.0.0.0 | 30120 | Falhou  | Licença não encontrada
+```
+
+---
+
+## Informações Registradas
+
+Cada tentativa armazena:
+
+- Data e horário
+- Endereço IP
+- Porta utilizada
+- Status da autenticação
+- Mensagem retornada pelo sistema
+
+---
+
+# Segurança
+
+O sistema de bloqueio por IP ajuda a garantir:
+
+- Integridade da licença
+- Controle de ativações
+- Segurança operacional
+- Redução de compartilhamentos indevidos
+- Monitoramento de autenticações
+
+---
+
+> Importante
+>
+> Nunca compartilhe sua licença publicamente ou utilize a mesma chave em múltiplos servidores sem autorização.
+
+---
+
+# Recomendação
+
+Sempre mantenha:
+
+- O IP atualizado no painel
+- A licença configurada corretamente
+- O nome original do recurso
+- O servidor conectado à internet
+
+---
+
+# Suporte
+
+Caso encontre problemas relacionados à autenticação por IP, utilize os canais oficiais da Athilio Software.
+
+Porque inevitavelmente alguém muda de VPS às 4 da manhã, esquece do IP novo e depois acusa o sistema inteiro de conspiração tecnológica.

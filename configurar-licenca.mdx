@@ -1,0 +1,96 @@
+---
+title: "Licença"
+description: "Configuração da licença do AthilioFy."
+---
+
+# Licença
+
+O AthilioFy utiliza autenticação via licença para validação do recurso durante a inicialização do servidor.
+
+---
+
+## Arquivo de Configuração
+
+A licença deve ser configurada no arquivo:
+
+```txt
+athilio_spotify/license.json
+```
+
+---
+
+## Estrutura Correta
+
+Abra o arquivo e configure da seguinte forma:
+
+```json
+{
+  "license": "SUA_LICENSE_AQUI"
+}
+```
+
+---
+
+## Como Configurar
+
+1. Acesse o painel da Athilio Software
+2. Copie sua licença oficial
+3. Abra o arquivo `license.json`
+4. Cole sua licença no campo `"license"`
+5. Salve o arquivo
+6. Reinicie o servidor
+
+---
+
+## Exemplo
+
+```json
+{
+  "license": "ATHILIO-XXXX-XXXX-XXXX"
+}
+```
+
+---
+
+> Importante
+>
+> Nunca compartilhe sua licença publicamente.
+
+---
+
+## Verificação
+
+Após iniciar o servidor, verifique no console:
+
+```txt
+[Athilio Spotify] ✔ Licença validada com sucesso!
+```
+
+Se essa mensagem aparecer, a licença foi autenticada corretamente.
+
+---
+
+## Problemas Comuns
+
+### Licença inválida
+
+Verifique:
+
+- Licença copiada corretamente
+- Espaços extras no arquivo
+- JSON formatado corretamente
+- IP autorizado no painel
+
+---
+
+### Arquivo inválido
+
+O arquivo deve permanecer exatamente neste formato:
+
+```json
+{
+  "license": "SUA_LICENSE_AQUI"
+}
+```
+
+Porque quebrar JSON por causa de uma vírgula perdida continua sendo tradição ancestral da computação moderna.

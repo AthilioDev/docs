@@ -1,0 +1,243 @@
+# Introdução
+
+Bem-vindo à documentação oficial da **Athilio Software**.
+
+Esta central foi criada para fornecer uma experiência clara, técnica e objetiva durante toda a utilização da plataforma. Aqui você encontrará materiais completos sobre instalação, configuração, segurança, integração e gerenciamento dos nossos serviços.
+
+---
+
+Nossa documentação é constantemente atualizada para acompanhar melhorias de infraestrutura, novas funcionalidades e atualizações de segurança da plataforma.
+
+Todo o sistema foi estruturado para funcionar de forma independente, otimizada e compatível com servidores FiveM modernos.
+
+---
+
+# Estrutura de Arquivos
+
+Abaixo está a estrutura padrão do recurso `athilio_spotify` após a instalação.
+
+```txt
+athilio_spotify/
+├── client.lua
+├── client_acadmin.lua
+├── fxmanifest.lua
+├── license.json
+├── server.lua
+├── server_ban.lua
+└── html/
+    ├── acadmin.css
+    ├── index.html
+    ├── jquery.js
+    ├── logo.png
+    ├── script.js
+    └── style.css
+```
+
+---
+
+## Arquivos Principais
+
+### `fxmanifest.lua`
+
+Arquivo responsável pelo carregamento do recurso no FiveM.
+
+Define:
+
+- Scripts client-side
+- Scripts server-side
+- Arquivos NUI
+- Dependências do recurso
+
+Sem este arquivo, o recurso não será iniciado pelo servidor.
+
+---
+
+### `client.lua`
+
+Responsável pela execução principal no lado do cliente.
+
+Gerencia:
+
+- Reprodução de áudio
+- Sincronização
+- Interface
+- Eventos locais
+- Comunicação NUI
+
+---
+
+### `server.lua`
+
+Responsável pela comunicação no lado servidor.
+
+Gerencia:
+
+- Autenticação
+- Sincronização global
+- Validação de licença
+- Callbacks
+- Eventos protegidos
+
+---
+
+### `server_ban.lua`
+
+Módulo responsável por verificações de segurança e proteção adicional.
+
+Utilizado para:
+
+- Validação de integridade
+- Bloqueios automatizados
+- Proteção contra manipulação do recurso
+
+---
+
+### `client_acadmin.lua`
+
+Responsável pelas integrações administrativas e funcionalidades de gerenciamento interno.
+
+---
+
+# Pasta `html`
+
+A pasta `html/` contém toda a interface visual (NUI) utilizada pelo sistema.
+
+```txt
+html/
+├── index.html
+├── style.css
+├── acadmin.css
+├── script.js
+├── jquery.js
+└── logo.png
+```
+
+---
+
+## Interface NUI
+
+### `index.html`
+
+Estrutura principal da interface.
+
+Responsável pela renderização dos componentes visuais da NUI.
+
+---
+
+### `style.css`
+
+Responsável pela estilização visual da interface principal.
+
+Controla:
+
+- Layout
+- Responsividade
+- Cores
+- Animações
+- Componentes visuais
+
+---
+
+### `script.js`
+
+Controla:
+
+- Interações da interface
+- Comunicação com Lua
+- Atualizações dinâmicas
+- Eventos da NUI
+
+---
+
+### `jquery.js`
+
+Biblioteca utilizada para manipulação de elementos e eventos da interface.
+
+---
+
+# Configuração da Licença
+
+O arquivo `license.json` é responsável pela autenticação da licença do produto.
+
+Localização:
+
+```txt
+athilio_spotify/license.json
+```
+
+Estrutura padrão:
+
+```json
+{
+  "license": "SUA_LICENSE_AQUI"
+}
+```
+
+---
+
+## Como configurar
+
+### 1. Acesse o painel
+
+Entre no painel oficial da Athilio Software e copie sua licença.
+
+---
+
+### 2. Abra o arquivo
+
+Abra o arquivo:
+
+```txt
+athilio_spotify/license.json
+```
+
+---
+
+### 3. Cole sua licença
+
+Substitua:
+
+```json
+{
+  "license": "SUA_LICENSE_AQUI"
+}
+```
+
+Pela sua chave oficial.
+
+---
+
+### 4. Salve o arquivo
+
+Após inserir sua licença, salve o arquivo normalmente.
+
+---
+
+### 5. Inicie o recurso
+
+Adicione no seu `server.cfg`:
+
+```cfg
+ensure athilio_spotify
+```
+
+---
+
+### 6. Reinicie o servidor
+
+Após reiniciar o servidor, o sistema realizará automaticamente a autenticação da licença.
+
+---
+
+# Importante
+
+- Nunca compartilhe sua licença publicamente.
+- A licença pode possuir autenticação por IP.
+- Alterações indevidas nos arquivos internos podem causar falha na validação.
+- Recomenda-se manter o recurso sempre atualizado.
+
+---
+
+# Suporte
+
+Em caso de dúvidas técnicas ou problemas relacionados à autenticação, utilize os canais oficiais da Athilio Software.

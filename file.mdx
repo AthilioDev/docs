@@ -1,0 +1,153 @@
+---
+title: "Erros e Soluções"
+description: "Referência rápida para erros comuns do AthilioFy."
+---
+
+# Erros e Soluções
+
+Esta seção apresenta os erros mais comuns encontrados durante a inicialização e autenticação do AthilioFy.
+
+---
+
+## Nenhuma licença configurada
+
+```txt
+[Athilio Spotify] ✖ Nenhuma licença configurada no license.json
+```
+
+### Causa
+
+O arquivo `license.json` está vazio ou não foi configurado corretamente.
+
+### Solução
+
+Abra o arquivo:
+
+```txt
+athilio_spotify/license.json
+```
+
+Configure sua licença:
+
+```json
+{
+  "license": "SUA_LICENSE_AQUI"
+}
+```
+
+---
+
+> Importante
+>
+> Utilize apenas licenças oficiais geradas no painel da Athilio Software.
+
+---
+
+## Licença inválida ou expirada
+
+```txt
+[Athilio Spotify] ✖ Licença inválida ou expirada
+```
+
+### Causa
+
+A licença inserida não pertence ao produto ou encontra-se inválida.
+
+### Solução
+
+Verifique:
+
+- Licença correta do AthilioFy
+- Espaços extras no arquivo
+- Caracteres inválidos
+- Licença ativa no painel
+
+---
+
+## IP não autorizado
+
+```txt
+[Athilio Spotify] ✖ IP não autorizado
+```
+
+### Causa
+
+O IP do VPS não está autorizado no sistema de autenticação.
+
+### Solução
+
+Acesse o painel oficial e atualize o IP do servidor.
+
+Verifique:
+
+- IP correto do VPS
+- Alterações recentes de hospedagem
+- Proxy ou firewall interferindo na conexão
+
+---
+
+## Licença validada com sucesso
+
+```txt
+[Athilio Spotify] ✔ Licença validada com sucesso!
+```
+
+### Status
+
+Tudo funcionando corretamente.
+
+O sistema foi autenticado e inicializado com sucesso.
+
+---
+
+## Verificando licença
+
+```txt
+[Athilio Spotify] Verificando licença...
+```
+
+### Status
+
+Processo normal de inicialização.
+
+O sistema está realizando comunicação com o servidor de autenticação.
+
+---
+
+# Resumo
+
+> Quando ocorrer erro relacionado à licença:
+>
+> - Verifique o `license.json`
+> - Confirme a licença correta
+> - Verifique o IP autorizado
+> - Reinicie o servidor após alterações
+
+---
+
+# Exemplo Correto
+
+```json
+{
+  "license": "SUA_LICENSE_AQUI"
+}
+```
+
+---
+
+# Recomendação
+
+Mantenha sempre:
+
+- O servidor atualizado
+- O nome da pasta original
+- A licença válida
+- O IP autorizado corretamente
+
+---
+
+## Suporte
+
+Caso o problema persista após todas as verificações, utilize os canais oficiais da Athilio Software.
+
+Porque 90% dos “bugs críticos” normalmente são um espaço errado no JSON ou alguém renomeando pasta achando que FiveM funciona na base da fé.

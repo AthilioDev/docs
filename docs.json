@@ -1,0 +1,74 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "sequoia",
+  "name": "Athilio Software",
+  "description": "Documentação AthilioFy",
+  "colors": {
+    "primary": "#39941d",
+    "light": "#53bd26",
+    "dark": "#3e8c22"
+  },
+  "favicon": "/favicon.ico",
+  "icons": {
+    "library": "lucide"
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "contextual": {
+    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Bem-Vindo",
+        "pages": [
+          "introducao",
+          "suporte",
+          "framwork"
+        ]
+      },
+      {
+        "group": "Instalação",
+        "pages": [
+          "instalacao",
+          "file"
+        ]
+      },
+      {
+        "group": "Licença",
+        "pages": [
+          "configurar-licenca",
+          "a",
+          "s"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "href": "/acmenu",
+        "label": "Novas Funções"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Employee portal",
+      "href": "https://dashboard.mintlify.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/yourcompany",
+      "linkedin": "https://linkedin.com/company/yourcompany"
+    }
+  },
+  "appearance": {
+    "default": "dark"
+  }
+}
