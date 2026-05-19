@@ -1,3 +1,4 @@
+````mdx
 ---
 title: "Instalação"
 description: "Guia oficial de instalação do AthilioFy."
@@ -5,24 +6,34 @@ description: "Guia oficial de instalação do AthilioFy."
 
 # Instalação
 
-O **AthilioFy** foi desenvolvido para oferecer instalação rápida, compatível e estável em qualquer estrutura moderna de servidor FiveM.
+## Instalação do AthilioFy
+
+O **AthilioFy** foi desenvolvido para oferecer instalação rápida, estável e compatível com qualquer estrutura moderna do FiveM.
+
+A arquitetura do sistema foi construída para funcionar de forma simples, otimizada e segura, evitando configurações desnecessárias e reduzindo problemas durante a implementação no servidor. Porque instalar script não deveria parecer engenharia reversa de satélite soviético feito em 1983.
 
 ---
 
-## Compatibilidade
+# Preview da Dashboard
 
-> Compatível com:
->
-> - vRP
-> - QBCore
-> - ESX
-> - Creative
-> - Bases customizadas
-> - Estruturas standalone
+![Dashboard AthilioFy](https://i.postimg.cc/DzDSNftr/image.png)
 
 ---
 
-## Estrutura do Recurso
+# Compatibilidade
+
+Compatível com:
+
+- vRP
+- QBCore
+- ESX
+- Creative
+- Bases customizadas
+- Estruturas standalone
+
+---
+
+# Estrutura do Recurso
 
 ```txt
 athilio_spotify/
@@ -33,7 +44,7 @@ athilio_spotify/
 ├── server.lua
 ├── server_ban.lua
 └── html/
-```
+````
 
 ---
 
@@ -51,6 +62,14 @@ Para:
 
 ```txt
 resources/[scripts]
+```
+
+Estrutura esperada:
+
+```txt
+resources/
+└── [scripts]/
+    └── athilio_spotify/
 ```
 
 ---
@@ -76,25 +95,43 @@ Configure sua licença:
 > Importante
 >
 > Nunca compartilhe sua licença publicamente.
+>
+> O sistema realiza validação automática durante a inicialização do recurso.
 
 ---
 
 ## 3. Adicione no server.cfg
 
+Adicione:
+
 ```cfg
 ensure athilio_spotify
 ```
+
+Recomendado iniciar após sua framework principal.
+
+Exemplo:
+
+```cfg
+ensure vrp
+ensure oxmysql
+ensure athilio_spotify
+```
+
+Porque ordem de inicialização ainda consegue quebrar servidor inteiro por causa de dependência carregada errado. O ser humano inventou inteligência artificial antes de aprender a organizar `server.cfg`.
 
 ---
 
 ## 4. Reinicie o servidor
 
-Após iniciar o recurso, o sistema realizará automaticamente:
+Após iniciar o recurso, o sistema executará automaticamente:
 
-- Verificação da licença
-- Inicialização da interface
-- Carregamento da NUI
-- Sincronização interna
+* Verificação da licença
+* Inicialização da interface
+* Carregamento da NUI
+* Sincronização interna
+* Proteções de autenticação
+* Verificações de integridade
 
 ---
 
@@ -111,20 +148,36 @@ html/
 
 ---
 
-## Problemas Comuns
+# Funcionamento Interno
 
-### Licença inválida
+O AthilioFy possui:
 
-Verifique:
+* Sistema de autenticação por licença
+* Proteção contra spoofing
+* Verificações automáticas de integridade
+* Comunicação segura entre cliente e servidor
+* Inicialização otimizada
+* Compatibilidade com múltiplas frameworks
 
-- Licença configurada corretamente
-- IP autorizado
-- Nome correto da pasta
-- VPS conectado à internet
+Toda a estrutura foi desenvolvida para minimizar impacto de performance e garantir estabilidade contínua no ambiente do servidor.
 
 ---
 
-### Recurso não inicia
+# Problemas Comuns
+
+## Licença inválida
+
+Verifique:
+
+* Licença configurada corretamente
+* IP autorizado no painel
+* Nome correto da pasta
+* VPS conectada à internet
+* Firewall liberando conexões externas
+
+---
+
+## Recurso não inicia
 
 Confirme se existe:
 
@@ -132,24 +185,66 @@ Confirme se existe:
 ensure athilio_spotify
 ```
 
-No `server.cfg`.
+No arquivo:
+
+```txt
+server.cfg
+```
+
+Também valide:
+
+* Nome da pasta exatamente igual
+* Artefact atualizado
+* Dependências iniciadas corretamente
 
 ---
 
-## Recomendação
+## Interface não abre
 
-> Utilize artefacts atualizados do FiveM para garantir melhor estabilidade e compatibilidade.
+Verifique:
+
+* Pasta `html/` presente
+* Arquivos NUI íntegros
+* Cache do FiveM limpo
+* Erros no console F8
 
 ---
 
-## Suporte
+# Recomendação
+
+> Utilize artefacts atualizados do FiveM para garantir melhor estabilidade, compatibilidade e segurança operacional.
+
+Também é recomendado:
+
+* Utilizar VPS Linux atualizada
+* Manter `oxmysql` em versões recentes
+* Evitar alterações estruturais no recurso
+* Não renomear arquivos internos
+
+Porque sempre aparece alguém que muda nome de arquivo crítico e depois culpa o script. A tradição da computação moderna.
+
+---
+
+# Suporte
 
 Caso tenha dúvidas técnicas ou problemas durante a instalação, utilize os canais oficiais da Athilio Software.
 
-- Discord Oficial
-- Atendimento técnico
-- Suporte operacional
+## Canais Oficiais
+
+* Discord Oficial
+* Atendimento Técnico
+* Suporte Operacional
+* Central de Licenciamento
 
 ---
 
-O AthilioFy foi desenvolvido para funcionar de forma simples, otimizada e compatível com qualquer estrutura moderna. Porque instalação de script não deveria parecer montagem de motor de submarino soviético.
+# Finalização
+
+O **AthilioFy** foi desenvolvido para funcionar de forma simples, otimizada e compatível com qualquer estrutura moderna.
+
+A proposta é entregar um sistema premium, seguro e profissional sem exigir configurações complexas ou adaptações absurdas no servidor.
+
+Porque software bom deveria resolver problema. Não criar trauma psicológico em quem administra FiveM.
+
+```
+```
