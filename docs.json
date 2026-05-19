@@ -25,13 +25,20 @@
       {
         "group": "Bem-Vindo",
         "pages": [
-          "introducao"
+          "introducao",
+          "suporte",
+          "framwork"
         ]
       },
       {
         "group": "Athilio_Spotify",
         "pages": [
-          "athilio_spotify"
+          "instalacao",
+          "file",
+          "configurar-licenca",
+          "a",
+          "s",
+          "termos"
         ]
       }
     ]
