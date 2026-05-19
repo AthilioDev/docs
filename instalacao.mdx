@@ -5,11 +5,7 @@ description: "Guia oficial de instalação do AthilioFy."
 
 # Instalação
 
-## Instalação do AthilioFy
-
 O **AthilioFy** foi desenvolvido para oferecer instalação rápida, estável e compatível com qualquer estrutura moderna do FiveM.
-
-A arquitetura do sistema foi criada para garantir desempenho, estabilidade e integração simplificada em servidores profissionais. Porque instalar script não deveria parecer ritual arcano feito por um técnico cansado às 4 da manhã tentando descobrir por que o `ensure` não sobe.
 
 ---
 
@@ -51,19 +47,7 @@ athilio_spotify/
 
 ## 1. Extraia o recurso
 
-Envie a pasta:
-
-```txt
-athilio_spotify
-```
-
-Para:
-
-```txt
-resources/[scripts]
-```
-
-Estrutura esperada:
+Envie a pasta `athilio_spotify` para o diretório de resources do servidor:
 
 ```txt
 resources/
@@ -89,27 +73,15 @@ Configure sua licença:
 }
 ```
 
----
-
-> Importante
->
-> Nunca compartilhe sua licença publicamente.
->
-> O sistema realiza validação automática durante a inicialização do recurso.
+<Warning>
+  Nunca compartilhe sua licença publicamente. O sistema realiza validação automática durante a inicialização do recurso.
+</Warning>
 
 ---
 
 ## 3. Adicione no server.cfg
 
-Adicione:
-
-```cfg
-ensure athilio_spotify
-```
-
-Recomendado iniciar após sua framework principal.
-
-Exemplo:
+Adicione ao final do seu `server.cfg`, preferencialmente após sua framework principal:
 
 ```cfg
 ensure vrp
@@ -117,7 +89,9 @@ ensure oxmysql
 ensure athilio_spotify
 ```
 
-Porque ordem de inicialização continua sendo capaz de destruir civilizações inteiras dentro do FiveM. Engenharia moderna é um milagre estatístico.
+<Tip>
+  A ordem de inicialização importa. Certifique-se de que o `athilio_spotify` é carregado após as dependências do servidor.
+</Tip>
 
 ---
 
@@ -158,8 +132,6 @@ O AthilioFy possui:
 - Inicialização otimizada
 - Compatibilidade com múltiplas frameworks
 
-Toda a estrutura foi desenvolvida visando baixo consumo de recursos e máxima estabilidade operacional.
-
 ---
 
 # Problemas Comuns
@@ -168,42 +140,25 @@ Toda a estrutura foi desenvolvida visando baixo consumo de recursos e máxima es
 
 Verifique:
 
-- Licença configurada corretamente
+- Licença configurada corretamente no `license.json`
 - IP autorizado no painel
 - Nome correto da pasta
 - VPS conectada à internet
 - Firewall liberando conexões externas
 
----
-
 ## Recurso não inicia
 
-Confirme se existe:
+Confirme se existe `ensure athilio_spotify` no `server.cfg` e valide:
 
-```cfg
-ensure athilio_spotify
-```
-
-No arquivo:
-
-```txt
-server.cfg
-```
-
-Também valide:
-
-- Nome da pasta exatamente igual
+- Nome da pasta exatamente igual ao original
 - Artefact atualizado
 - Dependências iniciadas corretamente
-
----
 
 ## Interface não abre
 
 Verifique:
 
-- Pasta `html/` presente
-- Arquivos NUI íntegros
+- Pasta `html/` presente e íntegra
 - Cache do FiveM limpo
 - Erros no console F8
 
@@ -211,16 +166,14 @@ Verifique:
 
 # Recomendações
 
-> Utilize artefacts atualizados do FiveM para garantir melhor estabilidade, compatibilidade e segurança operacional.
-
-Também recomendamos:
+<Tip>
+  Utilize artefacts atualizados do FiveM para garantir melhor estabilidade, compatibilidade e segurança operacional.
+</Tip>
 
 - Utilizar VPS Linux atualizada
 - Manter `oxmysql` em versões recentes
 - Evitar alterações estruturais no recurso
 - Não renomear arquivos internos
-
-Porque sempre existe alguém que altera nome de arquivo crítico e depois escreve no Discord “script bugado urgente”. A computação inteira funciona baseada em pessoas quebrando coisas perfeitamente funcionais.
 
 ---
 
@@ -228,19 +181,6 @@ Porque sempre existe alguém que altera nome de arquivo crítico e depois escrev
 
 Caso tenha dúvidas técnicas ou problemas durante a instalação, utilize os canais oficiais da Athilio Software.
 
-## Canais Oficiais
-
-- Discord Oficial
-- Atendimento Técnico
-- Suporte Operacional
-- Central de Licenciamento
-
----
-
-# Finalização
-
-O **AthilioFy** foi desenvolvido para funcionar de forma simples, otimizada e compatível com qualquer estrutura moderna.
-
-A proposta é entregar um sistema premium, seguro e profissional sem exigir configurações absurdas ou adaptações complexas no servidor.
-
-Porque software profissional deveria resolver problemas. Não criar novos em 17 canais diferentes do Discord.
+<Check>
+  Canais disponíveis: Discord Oficial, Atendimento Técnico, Suporte Operacional e Central de Licenciamento.
+</Check>

@@ -21,7 +21,7 @@ Através do dashboard você poderá acompanhar:
 
 # Informações da Licença
 
-Após acessar o painel, você visualizará informações semelhantes a:
+Após acessar o painel, você visualizará as informações da sua licença ativa:
 
 ```txt
 Status da Licença: Ativo
@@ -34,59 +34,7 @@ Servidor Autorizado: 0.0.0.0
 
 ## Credenciais
 
-A chave exibida no painel é utilizada para autenticação do recurso.
-
-Exemplo:
-
-```txt
-RMGUATADMWLBH
-```
-
-Essa chave deverá ser inserida no arquivo:
-
-```txt
-athilio_spotify/license.json
-```
-
----
-
-## Configuração da Licença
-
-Estrutura correta:
-
-```json
-{
-  "license": "RMGUATADMWLBH"
-}
-```
-
----
-
-> Importante
->
-> Nunca compartilhe sua licença publicamente.
-
----
-
-# Guia de Instalação Rápida
-
-## 1. Faça o download do recurso
-
-Baixe o resource oficial do AthilioFy através do painel.
-
----
-
-## 2. Configure o arquivo de licença
-
-Crie ou edite o arquivo:
-
-```txt
-athilio_spotify/license.json
-```
-
----
-
-## 3. Insira sua chave
+A chave exibida no painel é utilizada para autenticação do recurso e deverá ser inserida no arquivo `athilio_spotify/license.json`.
 
 ```json
 {
@@ -94,33 +42,47 @@ athilio_spotify/license.json
 }
 ```
 
+<Warning>
+  Nunca compartilhe sua licença publicamente. Sua chave é vinculada ao IP do seu servidor e de uso exclusivo.
+</Warning>
+
 ---
 
-## 4. Inicie o recurso
+# Guia de Instalação Rápida
 
-Adicione no `server.cfg`:
+<Steps>
+  <Step title="Faça o download do recurso">
+    Baixe o resource oficial do AthilioFy através do painel.
+  </Step>
+  <Step title="Configure o arquivo de licença">
+    Crie ou edite o arquivo `athilio_spotify/license.json` com sua chave.
 
-```cfg
-ensure athilio_spotify
-```
+    ```json
+    {
+      "license": "SUA_LICENSE_AQUI"
+    }
+    ```
+  </Step>
+  <Step title="Inicie o recurso">
+    Adicione no `server.cfg`:
+
+    ```cfg
+    ensure athilio_spotify
+    ```
+  </Step>
+</Steps>
 
 ---
 
 # Histórico de Validações
 
-O painel também disponibiliza um histórico completo das últimas autenticações realizadas pela sua licença.
-
-Exemplo:
+O painel disponibiliza um histórico completo das últimas autenticações realizadas pela sua licença.
 
 ```txt
 18/05/26 21:57:04 | 0.0.0.0 | 30120 | Sucesso | OK
 18/05/26 20:58:16 | 0.0.0.0 | 30120 | Sucesso | OK
 17/05/26 23:03:20 | 0.0.0.0 | 30120 | Falhou  | Licença não encontrada
 ```
-
----
-
-## Informações Registradas
 
 Cada validação registra:
 
@@ -134,15 +96,11 @@ Cada validação registra:
 
 # Redefinição de IP
 
-Caso o servidor seja migrado, reinstalado ou tenha alteração de IP, será necessário realizar uma redefinição no painel.
+Caso o servidor seja migrado, reinstalado ou tenha alteração de IP, será necessário realizar uma redefinição no painel. Isso atualiza o novo endereço autorizado sem necessidade de gerar uma nova chave.
 
-A redefinição permite atualizar o novo endereço autorizado da licença sem necessidade de gerar uma nova chave.
-
----
-
-> Recomendação
->
-> Sempre confirme o IP correto do VPS antes de realizar alterações no painel.
+<Tip>
+  Sempre confirme o IP correto do VPS antes de realizar alterações no painel.
+</Tip>
 
 ---
 
@@ -154,13 +112,9 @@ A redefinição permite atualizar o novo endereço autorizado da licença sem ne
 [Athilio Spotify] ✔ Licença validada com sucesso!
 ```
 
-Indica que:
-
-- A licença foi autenticada
-- O servidor está autorizado
-- O recurso foi iniciado corretamente
-
----
+<Check>
+  A licença foi autenticada, o servidor está autorizado e o recurso foi iniciado corretamente.
+</Check>
 
 ## Processo de Validação
 
@@ -168,7 +122,9 @@ Indica que:
 [Athilio Spotify] Verificando licença...
 ```
 
-Mensagem exibida durante a comunicação inicial com o sistema de autenticação.
+<Info>
+  Mensagem normal exibida durante a comunicação inicial com o sistema de autenticação.
+</Info>
 
 ---
 
@@ -188,4 +144,6 @@ O sistema de autenticação foi desenvolvido para garantir:
 
 Caso encontre dificuldades durante o gerenciamento da licença, utilize os canais oficiais da Athilio Software.
 
-Porque inevitavelmente alguém sempre consegue colar a licença errada, editar JSON no bloco de notas e depois culpar o universo inteiro pela autenticação falhar.
+<Check>
+  Se você tiver qualquer dúvida, entre em contato com a nossa equipe de suporte em nosso [WhatsApp](https://wa.me/) e [Discord](https://discord.gg/).
+</Check>

@@ -13,18 +13,14 @@ Esse processo ocorre automaticamente durante a inicialização do recurso.
 
 # Como Funciona
 
-Ao iniciar o servidor, o sistema realiza:
+Ao iniciar o servidor, o sistema realiza automaticamente:
 
 - Verificação da licença
 - Identificação do IP do VPS
 - Validação da autenticação
 - Registro da tentativa de conexão
 
-Caso o IP esteja autorizado, a licença será ativada normalmente.
-
----
-
-## Exemplo de Autenticação
+Caso o IP esteja autorizado, a licença será ativada normalmente:
 
 ```txt
 [Athilio Spotify] ✔ Licença validada com sucesso!
@@ -34,13 +30,11 @@ Caso o IP esteja autorizado, a licença será ativada normalmente.
 
 # IP Não Autorizado
 
-Quando o IP do servidor não corresponde ao autorizado no painel, o sistema poderá retornar:
+Quando o IP do servidor não corresponde ao autorizado no painel, o sistema retornará:
 
 ```txt
 [Athilio Spotify] ✖ IP não autorizado
 ```
-
----
 
 ## Possíveis Motivos
 
@@ -50,19 +44,17 @@ Quando o IP do servidor não corresponde ao autorizado no painel, o sistema pode
 - Configuração incorreta do servidor
 - Utilização da licença em outro ambiente
 
+<Warning>
+  Nunca compartilhe sua licença publicamente ou utilize a mesma chave em múltiplos servidores sem autorização.
+</Warning>
+
 ---
 
 # Redefinição de IP
 
-Caso o IP do servidor seja alterado, será necessário realizar uma redefinição diretamente no dashboard da Athilio Software.
-
-A redefinição atualiza o novo IP autorizado para utilização da licença.
-
----
+Caso o IP do servidor seja alterado, realize uma redefinição diretamente no dashboard da Athilio Software para atualizar o novo endereço autorizado.
 
 ## Quando redefinir
-
-Realize redefinição nos seguintes casos:
 
 - Troca de hospedagem
 - Mudança de VPS
@@ -70,22 +62,20 @@ Realize redefinição nos seguintes casos:
 - Alteração de IP público
 - Mudança de infraestrutura
 
+<Tip>
+  Sempre confirme o IP correto do VPS antes de realizar a redefinição no painel.
+</Tip>
+
 ---
 
 # Histórico de Validações
 
-Todas as tentativas de autenticação ficam registradas no painel.
-
-Exemplo:
+Todas as tentativas de autenticação ficam registradas no painel:
 
 ```txt
 18/05/26 21:57:04 | 0.0.0.0 | 30120 | Sucesso | OK
 17/05/26 23:03:20 | 0.0.0.0 | 30120 | Falhou  | Licença não encontrada
 ```
-
----
-
-## Informações Registradas
 
 Cada tentativa armazena:
 
@@ -99,19 +89,13 @@ Cada tentativa armazena:
 
 # Segurança
 
-O sistema de bloqueio por IP ajuda a garantir:
+O sistema de bloqueio por IP garante:
 
 - Integridade da licença
 - Controle de ativações
 - Segurança operacional
 - Redução de compartilhamentos indevidos
 - Monitoramento de autenticações
-
----
-
-> Importante
->
-> Nunca compartilhe sua licença publicamente ou utilize a mesma chave em múltiplos servidores sem autorização.
 
 ---
 
@@ -130,4 +114,6 @@ Sempre mantenha:
 
 Caso encontre problemas relacionados à autenticação por IP, utilize os canais oficiais da Athilio Software.
 
-Porque inevitavelmente alguém muda de VPS às 4 da manhã, esquece do IP novo e depois acusa o sistema inteiro de conspiração tecnológica.
+<Check>
+  Se você tiver qualquer dúvida, entre em contato com a nossa equipe de suporte em nosso [WhatsApp](https://wa.me/) e [Discord](https://discord.gg/).
+</Check>
